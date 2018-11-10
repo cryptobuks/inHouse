@@ -1,0 +1,78 @@
+body {
+	background-color: black;
+	overflow: hidden;
+	margin: 0;
+}
+video {
+	transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	display: none;
+}
+#remoteVideo {
+	height: 100vh;
+	width: 100vw;
+	object-fit: contain;
+}
+#localVideo {
+	height: 100px;
+	object-fit: contain;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+a:link { color: skyblue }
+a:hover { color: white }
+a {
+	display: block;
+	color: white;
+	font-family: Verdana, Arial, sans-serif;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 100vh;
+}
+label {
+	display: none;
+	position: absolute;
+	left: 20px;
+	top: 110px;
+	width: 90px;
+	overflow: hidden;
+	cursor: pointer;
+	border: 2px solid #999999; border-radius: 20px;
+}
+input[type=checkbox] {
+    display: none;
+}
+.toggle {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.toggle:before, .toggle:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold; box-sizing: border-box;
+}
+.toggle:before {
+	content: "ON";
+	padding-left: 10px;
+	background-color: #34A7C1; color: #FFFFFF;
+}
+.toggle:after {
+	content: "OFF";
+	padding-right: 10px;
+	background-color: #EEEEEE; color: #999999;
+	text-align: right;
+}
+label span + span {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+input[type=checkbox]:checked + span {
+    margin-left: 0;
+}
+input[type=checkbox]:checked + span + span {
+    right: 0px; 
+}
